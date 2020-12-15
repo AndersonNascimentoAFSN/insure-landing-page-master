@@ -1,0 +1,977 @@
+/* Box sizing rules */
+/* line 2, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* line 9, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+ul,
+ol {
+  padding: 0;
+}
+
+/* line 13, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 15, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove default margin */
+/* line 21, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* line 39, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* line 47, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* line 53, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* line 58, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* line 64, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* line 69, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  /* line 78, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_reset.scss */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* line 1, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --font-body: 'Karla', sans-serif;
+  --font-Headings: 'DM Serif Display', serif;
+}
+
+/* line 11, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+body {
+  font-family: var(--font-body);
+}
+
+/* line 15, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link {
+  padding: 8px 30px;
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  z-index: 100;
+}
+
+/* line 22, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title {
+  font-family: var(--font-Headings);
+  font-size: 3.7em;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+/* line 27, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title::before {
+  content: '';
+  display: table;
+  width: 160px;
+  height: 2px;
+  position: relative;
+  top: -68px;
+}
+
+/* line 39, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerBtn-Menu {
+  display: none;
+}
+
+/* line 43, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.header {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: max-content max-content;
+}
+
+/* line 52, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 20px;
+}
+
+/* line 56, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* line 59, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li a {
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* line 63, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li a:active, .headerMenu li a:link, .headerMenu li a:visited {
+  color: var(--dark-grayish-violet);
+}
+
+/* line 66, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li a:hover {
+  color: var(--dark-violet);
+}
+
+/* line 72, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-header, .link-header:link, .link-header:active, .link-header:visited {
+  color: var(--dark-violet) !important;
+  padding: 8px 30px !important;
+}
+
+/* line 77, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-header:hover {
+  color: var(--very-light-gray) !important;
+  background: var(--dark-violet);
+}
+
+/* line 84, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro-bg {
+  padding: 0 20px;
+  margin-bottom: 370px;
+  background: var(--dark-violet);
+  position: relative;
+}
+
+/* line 89, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro-bg::before {
+  content: '';
+  height: 500px;
+  width: 350px;
+  background: url(/images/bg-pattern-intro-right-desktop.svg) no-repeat;
+  background-position: top right;
+  background-size: 350px 500px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+}
+
+/* line 101, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro-bg::after {
+  content: '';
+  width: 200px;
+  height: 500px;
+  background: url(/images/bg-pattern-intro-left-desktop.svg) no-repeat;
+  background-position: bottom left;
+  background-size: 200px 500px;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  bottom: -350px;
+}
+
+/* line 115, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  color: var(--very-light-gray);
+}
+
+/* line 122, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro p {
+  font-size: 1em;
+}
+
+/* line 127, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.text-intro {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  gap: 30px;
+  padding-bottom: 116px;
+}
+
+/* line 134, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-intro {
+  padding-top: 160px;
+  font-family: var(--font-Headings);
+}
+
+/* line 137, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-intro::before {
+  background: var(--very-light-gray);
+}
+
+/* line 142, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-view-plans, .link-view-plans:link, .link-view-plans:active, .link-view-plans:visited {
+  color: var(--very-light-gray);
+  max-width: 160px;
+  text-decoration: none;
+}
+
+/* line 146, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-view-plans:hover, .link-view-plans:link:hover, .link-view-plans:active:hover, .link-view-plans:visited:hover {
+  color: var(--dark-violet);
+  background: var(--very-light-gray);
+}
+
+/* line 152, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.image-intro {
+  position: relative;
+  bottom: -104px;
+  margin-bottom: -80px;
+}
+
+/* line 161, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.were-different {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px 150px 20px;
+}
+
+/* line 167, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-were-different {
+  margin-bottom: 90px;
+}
+
+/* line 169, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-were-different::before {
+  background: var(--dark-grayish-violet);
+}
+
+/* line 173, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* line 177, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences img {
+  margin-bottom: 30px;
+}
+
+/* line 180, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences h3 {
+  margin-bottom: 16px;
+  font-size: 1.5em;
+}
+
+/* line 184, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences p {
+  color: var(--dark-grayish-violet);
+}
+
+/* line 191, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.how-we-work-section {
+  padding: 0 20px;
+}
+
+/* line 195, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.how-we-work {
+  max-width: 1120px;
+  margin: 0 auto 150px auto;
+  padding: 70px 80px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark-violet) url(/images/bg-pattern-how-we-work-desktop.svg) no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+/* line 208, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.how-we-work h1 {
+  font-family: var(--font-Headings);
+  font-size: 2.6em;
+  color: var(--very-light-gray);
+}
+
+/* line 214, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-how-we-work {
+  color: var(--very-light-gray);
+  text-decoration: none !important;
+}
+
+/* line 217, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-how-we-work:hover {
+  color: var(--dark-violet);
+  background: var(--very-light-gray);
+}
+
+/* line 225, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.footer-bg {
+  padding: 60px 20px 0 20px;
+  background: var(--very-light-gray) url(/images/bg-pattern-footer-desktop.svg) no-repeat;
+  background-position: top left;
+  background-size: 530px 220px;
+}
+
+/* line 232, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.logo-social {
+  margin: 0 auto;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--dark-grayish-violet);
+}
+
+/* line 242, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 16px;
+}
+
+/* line 246, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.social-media a svg {
+  transition: 0.1s;
+  fill: var(--dark-grayish-violet);
+}
+
+/* line 249, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.social-media a svg:hover {
+  transition: 0.1s;
+  fill: var(--dark-violet);
+}
+
+/* line 257, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* line 265, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer ul li {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* line 270, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer ul li a {
+  padding: 10px 0;
+}
+
+/* line 272, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer ul li a:active, .nav-footer ul li a:link, .nav-footer ul li a:visited {
+  color: var(--dark-violet);
+}
+
+/* line 279, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-nav-footer {
+  color: var(--dark-grayish-violet) !important;
+  text-transform: uppercase;
+  margin-bottom: 40px !important;
+}
+
+/* line 285, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.attribution {
+  margin: 0 auto;
+  max-width: 1120px;
+  text-align: center;
+}
+
+/* line 1, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --font-body: 'Karla', sans-serif;
+  --font-Headings: 'DM Serif Display', serif;
+}
+
+/* line 11, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+body {
+  font-family: var(--font-body);
+}
+
+/* line 15, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link {
+  padding: 8px 30px;
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  z-index: 100;
+}
+
+/* line 22, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title {
+  font-family: var(--font-Headings);
+  font-size: 3.7em;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+/* line 27, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title::before {
+  content: '';
+  display: table;
+  width: 160px;
+  height: 2px;
+  position: relative;
+  top: -68px;
+}
+
+/* line 39, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerBtn-Menu {
+  display: none;
+}
+
+/* line 43, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.header {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: max-content max-content;
+}
+
+/* line 52, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 20px;
+}
+
+/* line 56, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* line 59, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li a {
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* line 63, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li a:active, .headerMenu li a:link, .headerMenu li a:visited {
+  color: var(--dark-grayish-violet);
+}
+
+/* line 66, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.headerMenu li a:hover {
+  color: var(--dark-violet);
+}
+
+/* line 72, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-header, .link-header:link, .link-header:active, .link-header:visited {
+  color: var(--dark-violet) !important;
+  padding: 8px 30px !important;
+}
+
+/* line 77, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-header:hover {
+  color: var(--very-light-gray) !important;
+  background: var(--dark-violet);
+}
+
+/* line 84, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro-bg {
+  padding: 0 20px;
+  margin-bottom: 370px;
+  background: var(--dark-violet);
+  position: relative;
+}
+
+/* line 89, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro-bg::before {
+  content: '';
+  height: 500px;
+  width: 350px;
+  background: url(/images/bg-pattern-intro-right-desktop.svg) no-repeat;
+  background-position: top right;
+  background-size: 350px 500px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+}
+
+/* line 101, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro-bg::after {
+  content: '';
+  width: 200px;
+  height: 500px;
+  background: url(/images/bg-pattern-intro-left-desktop.svg) no-repeat;
+  background-position: bottom left;
+  background-size: 200px 500px;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  bottom: -350px;
+}
+
+/* line 115, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  color: var(--very-light-gray);
+}
+
+/* line 122, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.intro p {
+  font-size: 1em;
+}
+
+/* line 127, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.text-intro {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  gap: 30px;
+  padding-bottom: 116px;
+}
+
+/* line 134, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-intro {
+  padding-top: 160px;
+  font-family: var(--font-Headings);
+}
+
+/* line 137, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-intro::before {
+  background: var(--very-light-gray);
+}
+
+/* line 142, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-view-plans, .link-view-plans:link, .link-view-plans:active, .link-view-plans:visited {
+  color: var(--very-light-gray);
+  max-width: 160px;
+  text-decoration: none;
+}
+
+/* line 146, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-view-plans:hover, .link-view-plans:link:hover, .link-view-plans:active:hover, .link-view-plans:visited:hover {
+  color: var(--dark-violet);
+  background: var(--very-light-gray);
+}
+
+/* line 152, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.image-intro {
+  position: relative;
+  bottom: -104px;
+  margin-bottom: -80px;
+}
+
+/* line 161, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.were-different {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px 150px 20px;
+}
+
+/* line 167, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-were-different {
+  margin-bottom: 90px;
+}
+
+/* line 169, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-were-different::before {
+  background: var(--dark-grayish-violet);
+}
+
+/* line 173, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* line 177, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences img {
+  margin-bottom: 30px;
+}
+
+/* line 180, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences h3 {
+  margin-bottom: 16px;
+  font-size: 1.5em;
+}
+
+/* line 184, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.differences p {
+  color: var(--dark-grayish-violet);
+}
+
+/* line 191, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.how-we-work-section {
+  padding: 0 20px;
+}
+
+/* line 195, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.how-we-work {
+  max-width: 1120px;
+  margin: 0 auto 150px auto;
+  padding: 70px 80px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark-violet) url(/images/bg-pattern-how-we-work-desktop.svg) no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+/* line 208, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.how-we-work h1 {
+  font-family: var(--font-Headings);
+  font-size: 2.6em;
+  color: var(--very-light-gray);
+}
+
+/* line 214, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-how-we-work {
+  color: var(--very-light-gray);
+  text-decoration: none !important;
+}
+
+/* line 217, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.link-how-we-work:hover {
+  color: var(--dark-violet);
+  background: var(--very-light-gray);
+}
+
+/* line 225, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.footer-bg {
+  padding: 60px 20px 0 20px;
+  background: var(--very-light-gray) url(/images/bg-pattern-footer-desktop.svg) no-repeat;
+  background-position: top left;
+  background-size: 530px 220px;
+}
+
+/* line 232, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.logo-social {
+  margin: 0 auto;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--dark-grayish-violet);
+}
+
+/* line 242, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 16px;
+}
+
+/* line 246, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.social-media a svg {
+  transition: 0.1s;
+  fill: var(--dark-grayish-violet);
+}
+
+/* line 249, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.social-media a svg:hover {
+  transition: 0.1s;
+  fill: var(--dark-violet);
+}
+
+/* line 257, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* line 265, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer ul li {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* line 270, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer ul li a {
+  padding: 10px 0;
+}
+
+/* line 272, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.nav-footer ul li a:active, .nav-footer ul li a:link, .nav-footer ul li a:visited {
+  color: var(--dark-violet);
+}
+
+/* line 279, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.title-nav-footer {
+  color: var(--dark-grayish-violet) !important;
+  text-transform: uppercase;
+  margin-bottom: 40px !important;
+}
+
+/* line 285, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_styles.scss */
+.attribution {
+  margin: 0 auto;
+  max-width: 1120px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1083px) {
+  /* line 5, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .text-intro p {
+    text-align: center;
+    max-width: 400px;
+  }
+  /* line 10, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title {
+    font-size: 3em;
+  }
+  /* line 13, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title-how-we-work {
+    font-size: 2.4em !important;
+  }
+}
+
+@media only screen and (max-width: 894px) {
+  /* line 19, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title {
+    font-size: 2.7em;
+  }
+  /* line 22, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title-how-we-work {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 813px) {
+  /* line 33, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .headerBtn-Menu {
+    display: block;
+    background-repeat: no-repeat;
+    padding: 5px 20px;
+    text-indent: -9999px;
+    background-position: -20px right;
+  }
+  /* line 42, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .headerBtnMenu-open {
+    background-image: url(/images/icon-hamburger.svg);
+    width: 100%;
+  }
+  /* line 47, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .headerBtnMenu-close {
+    background-image: url(/images/icon-close.svg);
+  }
+  /* line 51, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .headerMenu {
+    padding: 40px;
+    grid-template-columns: 1fr;
+    background: var(--very-light-gray) url(/images/bg-pattern-mobile-nav.svg) no-repeat;
+    background-size: cover;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    transform: translateY(-150%);
+    transition: transform 200ms linear;
+  }
+  /* line 67, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .menuHeader-open {
+    transform: translateY(0);
+  }
+  /* line 72, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .intro-bg {
+    padding: 0px;
+  }
+  /* line 74, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .intro-bg::after {
+    content: none;
+  }
+  /* line 77, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .intro-bg::before {
+    content: none;
+  }
+  /* line 81, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  /* line 85, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .image-intro {
+    justify-self: center;
+    position: static;
+    margin-bottom: 0;
+    width: 100%;
+    height: 750px;
+  }
+  /* line 92, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .text-intro {
+    text-align: center;
+    order: 2;
+    justify-items: center;
+    padding: 90px 20px 100px 20px;
+    position: relative;
+  }
+  /* line 98, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .text-intro::before {
+    content: '';
+    width: 200px;
+    height: 400px;
+    background: url(/images/bg-pattern-intro-right-mobile.svg) no-repeat;
+    background-position: right bottom;
+    background-size: 200px 400px;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: -210px;
+  }
+  /* line 110, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .text-intro::after {
+    content: '';
+    width: 200px;
+    height: 170px;
+    background: url(/images/bg-pattern-intro-left-mobile.svg) no-repeat;
+    background-position: top lef;
+    background-size: 200px 170px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+  /* line 123, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title-intro {
+    padding-top: 0px;
+  }
+  /* line 125, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title-intro::before {
+    content: none;
+  }
+  /* line 132, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title-were-different {
+    text-align: center;
+  }
+  /* line 134, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .title-were-different::before {
+    content: '';
+    margin: auto;
+  }
+  /* line 139, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .differences {
+    grid-template-columns: 1fr;
+  }
+  /* line 141, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .differences > div {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+  /* line 145, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .differences > div p {
+    max-width: 450px;
+  }
+  /* line 152, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .how-we-work {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+    text-align: center;
+    background: var(--dark-violet) url(/images/bg-pattern-how-we-work-mobile.svg) no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+  /* line 164, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .footer-bg {
+    background: var(--very-light-gray) url(/images/bg-pattern-footer-mobile.svg) no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+  /* line 169, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .logo-social {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+  /* line 174, ../MEGA/projetos-web/insure-landing-page-master/css/scss/_resposive.scss */
+  .nav-footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
